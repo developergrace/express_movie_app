@@ -1,8 +1,6 @@
-<%- include('../partials/header') %>
-<h1>Popular Movies</h1>
-<div>
-  <% movies.forEach(m => { %>
-  <div><a href="/movies/<%= m.id %>"><%= m.title %></a></div>
-  <% }) %>
-</div>
-<%- include('../partials/footer') %>
+<%- include('../partials/header.ejs') %>
+<h1>this is the movie ejs page</h1>
+
+<% movies.forEach((movie) => { %>
+<li><a href="/movies/<%= movie.id %>"><%= movie.title %></a></li>
+<% }) %>
